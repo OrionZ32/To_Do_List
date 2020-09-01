@@ -3,13 +3,11 @@ const bodyParser = require("body-parser");
 // const https = require("https");
 
 const app = express();
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.get("/", function(req, res) {
-    
-    var today = new Data();
-
-    if(today.getDay() === 6 || )
+app.get("/", function(req, res) { 
+    res.sendFile(__dirname + "/index.html");
 });
 
 app.listen(3000, function() {
