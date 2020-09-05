@@ -1,23 +1,17 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const https = require("https");
+const date = require(__dirname + "/date.js");
 
 const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-let items = [];
+let items = ["Fix RSX", "Code", "Play Games"];
 let workItems = [];
 
 app.get("/", function (req, res) {
-    let today = new Date();
-    let options = {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-    };
-    let day = today.toLocaleDateString("en-US", options);
+    let day = date.getDate();
 
     res.render("list", { listTitle: day, newListItems: items });
 });
