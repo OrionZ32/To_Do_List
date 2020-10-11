@@ -1,8 +1,12 @@
 html {
-  background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, hsl(167, 60%, 43%) 50%, hsl(0, 0%, 62%) 50%);
+  background-color: #e4e9fd;
+  background-image: -webkit-linear-gradient(
+    65deg,
+    hsl(167, 60%, 43%) 50%,
+    hsl(0, 0%, 62%) 50%
+  );
   min-height: 1300px;
-  font-family: 'helvetica neue';
+  font-family: "helvetica neue";
 }
 
 h1 {
@@ -34,7 +38,7 @@ h1 {
   border-bottom: 0;
 }
 
-input:checked+p {
+input:checked + p {
   text-decoration: line-through;
   text-decoration-color: hsl(167, 60%, 43%);
 }
